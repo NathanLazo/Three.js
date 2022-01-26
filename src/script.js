@@ -18,16 +18,16 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 //Axis helper
-const axisHelper = new THREE.AxisHelper(10);
-scene.add(axisHelper);
+// const axisHelper = new THREE.AxisHelper(10);
+// scene.add(axisHelper);
 
 
 /**
  * Textures
  */
 const textureLoader = new THREE.TextureLoader()
-const matcap = textureLoader.load('/textures/matcaps/8.png');
-const matcap2 = textureLoader.load('/textures/matcaps/7.png');
+const matcap = textureLoader.load('/textures/matcaps/7.png');
+const matcap2 = textureLoader.load('/textures/matcaps/4.png');
 
 
 
@@ -69,7 +69,7 @@ const jorgeMaterial = new THREE.MeshMatcapMaterial({matcap: matcap2});
 
 
 
-const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
+const donutGeometry = new THREE.SphereGeometry(0.3, 0.2, 20, 45);
 
 for(let i = 0; i<100; i++){
     const donut = new THREE.Mesh(
